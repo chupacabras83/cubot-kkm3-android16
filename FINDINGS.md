@@ -1,5 +1,11 @@
 # Findings — what actually blocks Android 16 on this unit
 
+> ⚠️ **SUPERSEDED (2026-11-16).** The core conclusion below — "no software-only path /
+> the bootloader cannot be unlocked" — was **wrong**. The bootloader *can* be unlocked; the
+> prior test used the malformed command `flashing:unlock` (colon) instead of the correct
+> `flashing unlock` (space). This device now runs **Android 16**. See
+> [unlock-fix.md](unlock-fix.md) and [flash-boot.md](flash-boot.md).
+
 **Device:** Cubot KingKong Mini 3 (`KINGKONGMINI3_EEA`), Helio G85 / MT6769V-CZ,
 fingerprint `...:12/SP1A.210812.016/1670324649` (V07-era, December 2022 build).
 

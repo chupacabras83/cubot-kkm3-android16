@@ -4,3 +4,5 @@ backup/
 *.xz
 *.zip
 *.7z
+__pycache__/
+*.pyc

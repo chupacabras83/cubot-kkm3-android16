@@ -5,8 +5,10 @@ Helio G85 handset that Cubot abandoned on **Android 12**. There is no official u
 no device-specific custom ROM; this project documents and automates the **Treble GSI**
 route, and tracks what does and does not work.
 
-> **Status: IN PROGRESS.** Images staged and verified. Flashing blocked on two local
-> hardware gates (bootloader driver + physical unlock confirmation) — see [Blockers](#blockers).
+> **Status: DONE (2026-11-16).** **Android 16 is booted on the device** (`ro.build.version.release=16`,
+> SDK 36, security patch 2026-09-01) via the fastbootd GSI route. IMEI, modem, Wi-Fi,
+> Bluetooth and camera all verified working. See [docs/flash-boot.md](docs/flash-boot.md)
+> and [docs/unlock-fix.md](docs/unlock-fix.md).
 
 ---
 
@@ -85,6 +87,22 @@ GSI without needing the stock ROM. This is the lower-risk path and is what this 
 uses by default.
 
 ---
+
+## HyperOS-style look (best effort)
+
+The request was a Xiaomi **HyperOS** launcher/icons/style. Honest scope:
+
+- **Full HyperOS is proprietary Xiaomi software** — the real HyperOS system UI, control
+  centre and theme engine need Xiaomi's MIUI/HyperOS framework and do not install on
+  non-Xiaomi hardware. Any site advertising a "HyperOS ROM for the KKM3" is shipping a
+  themed AOSP build, not HyperOS.
+- **The honest equivalent** over this Android 16 GSI is a HyperOS-style **launcher +
+  icon pack + wallpaper**:
+  - *Launcher*: a MIUI/HyperOS-style launcher (or Lawnchair/Nova) installed from the Play
+    Store / APKMirror, then set as the default home app.
+  - *Icons*: "HyperOS Icon Pack" or "MIUI 14 Icon Pack".
+  - *Wallpaper*: a HyperOS abstract wallpaper.
+  - *Default home*: Settings → Apps → Default apps → Home app.
 
 ## Credits
 
