@@ -104,6 +104,16 @@ The request was a Xiaomi **HyperOS** launcher/icons/style. Honest scope:
   - *Wallpaper*: a HyperOS abstract wallpaper.
   - *Default home*: Settings → Apps → Default apps → Home app.
 
+### What was actually sideloaded (2026-11-16)
+
+- **Launcher** — [Lawnchair Nightly (16-dev)](https://github.com/LawnchairLauncher/lawnchair/releases/tag/nightly)
+  (`app.lawnchair.nightly`, built against Android 16). Set as default home via
+  `adb shell cmd package set-home-activity app.lawnchair.nightly/app.lawnchair.LawnchairLauncher`.
+- **Icons** — HyperOS Icon Pack by AKBON (`com.akbon.miui`), a split APK installed with
+  `adb install-multiple` (base + `config.arm64_v8a` + `config.mdpi` + `config.en` + `config.fr`).
+- **Apply** — `adb shell am start -n app.lawnchair.nightly/app.lawnchair.ui.ApplyIconPackActivity -d 'package:com.akbon.miui'`
+  (or Lawnchair Settings → Theme → Icon pack → HyperOS).
+
 ## Credits
 
 This project stands entirely on other people's work. See [CREDITS.md](CREDITS.md).
