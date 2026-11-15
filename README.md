@@ -113,6 +113,10 @@ The request was a Xiaomi **HyperOS** launcher/icons/style. Honest scope:
   `adb install-multiple` (base + `config.arm64_v8a` + `config.mdpi` + `config.en` + `config.fr`).
 - **Apply** — `adb shell am start -n app.lawnchair.nightly/app.lawnchair.ui.ApplyIconPackActivity -d 'package:com.akbon.miui'`
   (or Lawnchair Settings → Theme → Icon pack → HyperOS).
+- **Wallpaper** — generated a HyperOS-style blue→purple→violet gradient
+  (`tools/gen_wallpaper.py`, pure-stdlib PNG), pushed to `/sdcard/hyperos_wallpaper.png`,
+  then set via the system "Set wallpaper" flow. Old launcher `com.android.launcher3`
+  (+ its RRO overlay) disabled with `pm disable-user --user 0`.
 
 ## Credits
 
